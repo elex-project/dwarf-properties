@@ -77,7 +77,7 @@ abstract class AbsProperty<T> implements Property<T>, Serializable {
 	}
 
 	@Override
-	public void setValue(@Nullable final T value) {
+	public void set(@Nullable final T value) {
 		if ((null == this.value && null == value)
 				|| (null != this.value && this.value.equals(value))) return;
 		final T oldValue = this.value;
@@ -89,7 +89,7 @@ abstract class AbsProperty<T> implements Property<T>, Serializable {
 
 	@Override
 	@Nullable
-	public T getValue() {
+	public T get() {
 		return value;
 	}
 

@@ -52,16 +52,16 @@ abstract class NumberProperty<T extends Number> extends AbsProperty<T> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : String.valueOf(getValue());
+		return (null == get()) ? EMPTY_STRING : String.valueOf(get());
 	}
 
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof Number) {
-			return o.equals(this.getValue());
+			return o.equals(this.get());
 		} else if (o instanceof NumberProperty
-				&& null != ((NumberProperty<?>) o).getValue()) {
-			return ((NumberProperty<?>) o).getValue().equals(this.getValue());
+				&& null != ((NumberProperty<?>) o).get()) {
+			return ((NumberProperty<?>) o).get().equals(this.get());
 		} else {
 			return super.equals(o);
 

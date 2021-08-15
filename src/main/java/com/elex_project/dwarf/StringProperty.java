@@ -59,13 +59,13 @@ public final class StringProperty extends AbsProperty<String> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : getValue();
+		return (null == get()) ? EMPTY_STRING : get();
 	}
 
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof String) {
-			return o.equals(getValue());
+			return o.equals(get());
 		} else {
 			return super.equals(o);
 		}

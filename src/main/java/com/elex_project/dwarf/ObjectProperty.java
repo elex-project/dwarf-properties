@@ -34,8 +34,6 @@ package com.elex_project.dwarf;
 
 import org.jetbrains.annotations.Nullable;
 
-import static com.elex_project.dwarf.StringProperty.EMPTY_STRING;
-
 /**
  * General object property
  *
@@ -60,7 +58,7 @@ public final class ObjectProperty<T> extends AbsProperty<T> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : getValue().toString();
+		return (null == get()) ? EMPTY_STRING : get().toString();
 	}
 
 }

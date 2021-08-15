@@ -62,7 +62,7 @@ public final class LocalDateTimeProperty extends AbsProperty<LocalDateTime> {
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof LocalDateTime) {
-			return o.equals(getValue());
+			return o.equals(get());
 		} else {
 			return super.equals(o);
 		}
@@ -79,6 +79,6 @@ public final class LocalDateTimeProperty extends AbsProperty<LocalDateTime> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : getValue().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+		return (null == get()) ? EMPTY_STRING : get().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
 	}
 }

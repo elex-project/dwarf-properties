@@ -59,13 +59,13 @@ public final class CharacterProperty extends AbsProperty<Character> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : getValue().toString();
+		return (null == get()) ? EMPTY_STRING : get().toString();
 	}
 
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof Character) {
-			return o.equals(getValue());
+			return o.equals(get());
 		} else {
 			return super.equals(o);
 		}

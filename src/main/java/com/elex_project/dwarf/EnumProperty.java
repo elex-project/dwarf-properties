@@ -51,6 +51,6 @@ public final class EnumProperty<T extends Enum<?>> extends AbsProperty<T> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : getValue().toString();
+		return (null == get()) ? EMPTY_STRING : get().toString();
 	}
 }

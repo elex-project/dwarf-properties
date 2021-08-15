@@ -34,8 +34,6 @@ package com.elex_project.dwarf;
 
 import org.jetbrains.annotations.Nullable;
 
-import static com.elex_project.dwarf.StringProperty.EMPTY_STRING;
-
 /**
  * Boolean property
  *
@@ -61,13 +59,13 @@ public final class BooleanProperty extends AbsProperty<Boolean> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING : String.valueOf(getValue());
+		return (null == get()) ? EMPTY_STRING : String.valueOf(get());
 	}
 
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof Boolean) {
-			return o.equals(getValue());
+			return o.equals(get());
 		} else {
 			return super.equals(o);
 		}

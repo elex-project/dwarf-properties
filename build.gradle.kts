@@ -34,11 +34,11 @@ plugins {
 	java
 	`java-library`
 	`maven-publish`
-	id("com.github.ben-manes.versions") version "0.36.0"
+	id("com.github.ben-manes.versions") version "0.39.0"
 }
 
 group = "com.elex-project"
-version = "2.0.5"
+version = "2.1.0"
 description = "Properties with a value and its value change listeners"
 
 repositories {
@@ -69,7 +69,7 @@ tasks.jar {
 				"Implementation-Title" to project.name,
 				"Implementation-Version" to project.version,
 				"Implementation-Vendor" to "ELEX co.,pte.",
-				"Automatic-Module-Name" to "com.elex_project.dwarf"
+				"Automatic-Module-Name" to "com.elex_project.${project.name}"
 		))
 	}
 }
@@ -149,15 +149,14 @@ publishing {
 }
 
 dependencies {
-	implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-	implementation("org.slf4j:slf4j-api:1.7.30")
-	implementation("org.jetbrains:annotations:20.1.0")
+	implementation("org.slf4j:slf4j-api:1.7.32")
+	implementation("org.jetbrains:annotations:21.0.1")
 
-	compileOnly("org.projectlombok:lombok:1.18.16")
-	annotationProcessor("org.projectlombok:lombok:1.18.16")
-	testAnnotationProcessor("org.projectlombok:lombok:1.18.16")
+	compileOnly("org.projectlombok:lombok:1.18.20")
+	annotationProcessor("org.projectlombok:lombok:1.18.20")
+	testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
 
-	testImplementation("ch.qos.logback:logback-classic:1.2.3")
-	testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
-	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+	testImplementation("ch.qos.logback:logback-classic:1.2.5")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }

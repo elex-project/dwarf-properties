@@ -36,10 +36,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -69,7 +65,7 @@ public final class DateProperty extends AbsProperty<Date> {
 	@Override
 	public boolean equals(final Object o) {
 		if (o instanceof Date) {
-			return o.equals(getValue());
+			return o.equals(get());
 		} else {
 			return super.equals(o);
 		}
@@ -86,7 +82,7 @@ public final class DateProperty extends AbsProperty<Date> {
 
 	@Override
 	public String toString() {
-		return (null == getValue()) ? EMPTY_STRING
-				: DATE_FORMAT.format(getValue());
+		return (null == get()) ? EMPTY_STRING
+				: DATE_FORMAT.format(get());
 	}
 }

@@ -46,14 +46,14 @@ public interface Property<T> {
 	 *
 	 * @param value value
 	 */
-	public void setValue(final T value);
+	public void set(final T value);
 
 	/**
 	 * get a value
 	 *
 	 * @return value
 	 */
-	public T getValue();
+	public T get();
 
 	/**
 	 * Add a listener

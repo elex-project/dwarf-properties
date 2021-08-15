@@ -17,7 +17,7 @@ repositories {
 	}
 }
 dependencies {
-	implementation("com.elex-project:properties:2.0.2")
+	implementation("com.elex-project:dwarf:2.1.0")
 }
 ```
 

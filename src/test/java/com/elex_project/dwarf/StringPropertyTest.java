@@ -51,9 +51,9 @@ class StringPropertyTest {
 		};
 		property.addListener(listener);
 
-		property.setValue("Hello");
+		property.set("Hello");
 
-		assertEquals("Hello", property.getValue());
+		assertEquals("Hello", property.get());
 
 		System.out.println(property);
 	}

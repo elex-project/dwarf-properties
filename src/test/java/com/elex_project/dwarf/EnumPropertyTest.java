@@ -49,7 +49,7 @@ class EnumPropertyTest {
 		EnumProperty<MyEnum> enumEnumProperty = new EnumProperty<>(MyEnum.ITEM_1);
 		enumEnumProperty.addListener((PropertyListener<MyEnum>) (oldValue, newValue)
 				-> log.info("{} -> {}", oldValue, newValue));
-		enumEnumProperty.setValue(MyEnum.ITEM_2);
+		enumEnumProperty.set(MyEnum.ITEM_2);
 
 		EnumProperty<MyEnum> enumEnumProperty1 = new EnumProperty<>(MyEnum.ITEM_2);
 		EnumProperty<MyEnum> enumEnumProperty2 = new EnumProperty<>(MyEnum.ITEM_3);
